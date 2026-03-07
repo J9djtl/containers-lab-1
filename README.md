@@ -117,7 +117,32 @@ local     pg_data
 ```
 #### 1.3 Работа с томами (Практическое задание)
 Создайте том для статических файлов, запустите Nginx с примонтированным томом, скопируйте в него файл index.html с помощью docker cp по пути внутри контейнера /usr/share/nginx/html и проверьте доступность страницы в браузере.
-
+#### 1.4 Сеть в Docker
+```
+PS C:\Users\yulia\docker\containers-lab-1> docker network ls
+NETWORK ID     NAME             DRIVER    SCOPE
+cc21115aa102   bridge           bridge    local
+e4bd26cd98da   django-network   bridge    local
+c997212c94b9   host             host      local
+10479ebf6208   my-app-network   bridge    local
+8d2aa50efb26   none             null      local
+PS C:\Users\yulia\docker\containers-lab-1> docker exec app ping postgres
+PING postgres (172.19.0.2): 56 data bytes
+64 bytes from 172.19.0.2: seq=0 ttl=64 time=0.319 ms
+64 bytes from 172.19.0.2: seq=1 ttl=64 time=0.125 ms
+64 bytes from 172.19.0.2: seq=2 ttl=64 time=0.112 ms
+64 bytes from 172.19.0.2: seq=3 ttl=64 time=0.132 ms
+64 bytes from 172.19.0.2: seq=4 ttl=64 time=0.173 ms
+```
+#### 1.4 Сеть в Docker (Практическое задание)
+Создайте сеть типа bridge, запустите в ней два контейнера (Nginx и PostgreSQL), проверьте их взаимодействие по именам контейнеров (можно сделать ping из контейнера к другому контейнеру через docker exec).
+```
+PS C:\Users\yulia\docker\containers-lab-1> docker exec nginx-bridge ping pg-bridge
+PING pg-bridge (172.20.0.2): 56 data bytes
+64 bytes from 172.20.0.2: seq=0 ttl=64 time=0.232 ms
+64 bytes from 172.20.0.2: seq=1 ttl=64 time=0.216 ms
+64 bytes from 172.20.0.2: seq=2 ttl=64 time=0.175 ms
+```
 ### 2. Скриншоты работающего приложения
 #### 2.1 Главная страница
 ![Главная страница](screenshots/main-page.png)
