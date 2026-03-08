@@ -117,6 +117,7 @@ local     pg_data
 ```
 #### 1.3 Работа с томами (Практическое задание)
 Создайте том для статических файлов, запустите Nginx с примонтированным томом, скопируйте в него файл index.html с помощью docker cp по пути внутри контейнера /usr/share/nginx/html и проверьте доступность страницы в браузере.
+![Страница в браузере](1.jpg)
 #### 1.4 Сеть в Docker
 ```
 PS C:\Users\yulia\docker\containers-lab-1> docker network ls
@@ -145,11 +146,11 @@ PING pg-bridge (172.20.0.2): 56 data bytes
 ```
 ### 2. Скриншоты работающего приложения
 #### 2.1 Главная страница
-![Главная страница](screenshots/main-page.png)
+![Главная страница](main-page.jpg)
 #### 2.2 Добавление пользователя
-![Добавление пользователя](screenshots/add-user.png)
+![Добавление пользователя](add-user.jpg)
 #### 2.3 Список пользователей в БД
-![PostgreSQL](screenshots/postgres-data.png)
+![PostgreSQL](postgres-data.jpg)
 ### 3. GitHub Actions
 #### 3.1 Успешный запуск workflow
 ![GitHub Actions](screenshots/github-actions.png)
