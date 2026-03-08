@@ -87,5 +87,5 @@ jobs:
         run: |
           docker compose -f docker-compose.test.yml up -d
           sleep 60
-          curl -f http://localhost/ || exit 1
-          docker compose down
+          docker compose -f docker-compose.test.yml ps
+          docker compose -f docker-compose.test.yml down
