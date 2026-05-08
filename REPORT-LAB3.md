@@ -38,8 +38,10 @@ k8s-worker2:
 
 k8s-master:
 ![alt text](pics/image-7.png)
+
 k8s-worker1:
 ![alt text](pics/image-8.png)
+
 k8s-worker2:
 ![alt text](pics/image-9.png)
 
@@ -47,8 +49,10 @@ k8s-worker2:
 
 k8s-master:
 ![alt text](pics/image-10.png)
+
 k8s-worker1:
 ![alt text](pics/image-11.png)
+
 k8s-worker2:
 ![alt text](pics/image-12.png)
 
